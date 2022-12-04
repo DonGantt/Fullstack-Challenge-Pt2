@@ -10,12 +10,13 @@ import configureCustomStore from './store/configureStore'
 const root = ReactDOM.createRoot(document.getElementById('root'))
 const store = configureCustomStore()
 
+
+//For development purposes, I removed React.Strict because of it rendering the DOM twice. In a production environment I would reenable <React.Strict></React.Strict>
+
 root.render(
-  <React.StrictMode>
     <Provider store={store}>
       <App />
     </Provider>
-  </React.StrictMode>
 )
 
 // If you want to start measuring performance in your app, pass a function
